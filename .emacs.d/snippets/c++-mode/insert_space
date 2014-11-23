@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: insert_space
+# key: <<<
+# binding: direct-keybinding
+# --
+<< " " <<
