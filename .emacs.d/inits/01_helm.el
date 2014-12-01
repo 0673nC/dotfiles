@@ -30,13 +30,21 @@
 ;; 自動補完を無効
 (custom-set-variables '(helm-ff-auto-update-initial-value nil))
 
-;; TABをActionから補完に
+;; helm-mapでC-hを削除に
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+
+;; TABをActionから補完に
 (define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
+;; helm-find-fileでC-wをActionに
+(define-key helm-c-read-file-map (kbd "C-w") 'helm-select-action)
+(define-key helm-find-files-map (kbd "C-w") 'helm-select-action)
+(define-key helm-read-file-map (kbd "C-w") 'helm-select-action)
+
+;; その他キー設定
 (define-key global-map (kbd "C-x C-b")   'helm-buffers-list)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
