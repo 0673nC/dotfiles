@@ -13,6 +13,7 @@
     coffee-mode
     helm
     helm-ls-git
+    helm-git-grep
     js2-mode
     web-mode
     scala-mode2
