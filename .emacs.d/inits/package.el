@@ -12,6 +12,7 @@
     yasnippet
     coffee-mode
     helm
+    helm-ls-git
     js2-mode
     web-mode
     scala-mode2

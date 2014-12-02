@@ -6,6 +6,8 @@
 (require 'helm-files)
 (require 'helm-mode)
 (require 'helm-misc)
+(require 'helm-ls-git)
+
 
 (helm-mode 1)
 
@@ -17,6 +19,7 @@
   (custom-set-variables
    '(helm-mini-default-sources '(helm-source-buffers-list
                                  helm-source-files-in-current-dir
+                                 helm-source-ls-git
                                  helm-source-recentf
                                  helm-source-buffer-not-found))
    ))
@@ -48,6 +51,7 @@
 (define-key global-map (kbd "C-x C-b")   'helm-buffers-list)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "C-x b") 'helm-ls-git-ls)
 (define-key global-map (kbd "M-x") 'helm-M-x)
 
 ;; helm-find-file と execute-extended-command の無効化
