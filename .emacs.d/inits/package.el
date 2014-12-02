@@ -25,6 +25,7 @@
     shell-pop
     init-loader
     tabbar
+    powerline
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
