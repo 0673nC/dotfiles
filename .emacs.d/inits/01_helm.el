@@ -44,6 +44,7 @@
 
 ;; その他キー設定
 (define-key global-map (kbd "C-;") 'helm-mini)
+(define-key global-map (kbd "C-c h") 'helm-mini)
 (define-key global-map (kbd "C-x C-b")   'helm-buffers-list)
 (define-key global-map (kbd "C-x b") 'helm-ls-git-ls)
 (define-key global-map (kbd "C-x g") 'helm-git-grep)
