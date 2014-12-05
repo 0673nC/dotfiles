@@ -41,7 +41,7 @@
   ;; and other bindings here
 ))
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp/ensime_2.10.0-RC3-0.9.8.2/elisp")
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/ensime_2.10.0-RC3-0.9.8.2/elisp")
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 ;; MINI HOWTO: open .scala file. Ensure bin/server.sh is executable. M-x ensime
