@@ -11,6 +11,13 @@
 ;; helm-mini buffer
 (progn
   (custom-set-variables
+   ;; 自動補完を無効
+   '(helm-ff-auto-update-initial-value nil)
+   ;; helm-ls-gitのpath gitのルートディレクトリから
+   ;'(helm-ls-git-show-abs-or-relative 'relative)
+   ;; buffer内の文字をwindow端で折り返さない
+   '(helm-truncate-lines t)
+   ;; helm-mini 
    '(helm-mini-default-sources '(helm-source-buffers-list
                                  helm-source-files-in-current-dir
                                  helm-source-ls-git
@@ -24,9 +31,6 @@
   (before helm-emulate-kill-line activate)
   "Emulate `kill-line' in helm minibuffer"
   (kill-new (buffer-substring (point) (field-end))))
-
-;; 自動補完を無効
-(custom-set-variables '(helm-ff-auto-update-initial-value nil))
 
 ;; helm-mapでC-hを削除に
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
