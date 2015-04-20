@@ -10,6 +10,7 @@
 (defvar installing-package-list
   '(auto-complete
     yasnippet
+    yascroll
     coffee-mode
     helm
     helm-ls-git
