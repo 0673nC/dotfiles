@@ -28,6 +28,7 @@
     init-loader
     tabbar
     powerline
+    recentf-ext
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
