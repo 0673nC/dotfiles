@@ -15,7 +15,7 @@
 (scroll-bar-mode 0)
 
 ;;add yascroll bar
-(yascroll-bar-mode 1)
+(global-yascroll-bar-mode 1)
 
 ;;back ground color
 (set-background-color "Black")
