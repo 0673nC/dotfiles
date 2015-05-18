@@ -29,6 +29,7 @@
     tabbar
     powerline
     recentf-ext
+    markdown-mode
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
