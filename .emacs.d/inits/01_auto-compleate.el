@@ -21,4 +21,6 @@
 ;; 候補の最大件数 デフォルトは 10件
 (setq ac-candidate-max 20)
 
-
+;; 曖昧マッチ
+(require 'fuzzy)
+(setq ac-use-fuzzy t)

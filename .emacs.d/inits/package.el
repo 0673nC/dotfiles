@@ -9,6 +9,7 @@
 (require 'cl)
 (defvar installing-package-list
   '(auto-complete
+    fuzzy
     yasnippet
     yascroll
     coffee-mode
