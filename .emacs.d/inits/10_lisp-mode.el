@@ -28,6 +28,17 @@
 ;; Connections
 (push '(slime-connection-list-mode) popwin:special-display-config)
 
+;; slime auto-compleate
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+
+;; SLIME quit
+(defun slime-smart-quit ()
+  (interactive)
+  (when (slime-connected-p)
+    (if (equal (slime-machine-instance) "my.workstation")
+      (slime-quit-lisp)
+      (slime-disconnect)))
+  (slime-kill-all-buffers))
+(add-hook 'kill-emacs-hook 'slime-smart-quit)
