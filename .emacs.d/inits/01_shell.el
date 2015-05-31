@@ -11,12 +11,14 @@
          (define-key shell-mode-map [up] 'comint-previous-input)
           (define-key shell-mode-map [down] 'comint-next-input))))
 
-
-
 ;; shell-pop
-; shell-pop の設定
 (require 'shell-pop)
 (global-set-key [f8] 'shell-pop)
-(shell-pop-set-internal-mode "ansi-term")
-(shell-pop-set-internal-mode-shell "/bin/zsh")
-(shell-pop-set-window-height 60)
+(custom-set-variables
+ ;; '(shell-pop-default-directory "~/")
+ '(shell-pop-shell-type (quote ("ansi-term" "*ansi-term*" (lambda nil (ansi-term shell-pop-term-shell)))))
+ '(shell-pop-term-shell "/bin/zsh")
+ '(shell-pop-universal-key "C-c t")
+ '(shell-pop-window-height 30)
+ '(shell-pop-full-span t)
+ '(shell-pop-window-position "bottom"))
