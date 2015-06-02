@@ -24,3 +24,6 @@
 ;; 曖昧マッチ
 (require 'fuzzy)
 (setq ac-use-fuzzy t)
+
+;; 大文字・小文字を区別する
+(setq ac-ignore-case nil)
