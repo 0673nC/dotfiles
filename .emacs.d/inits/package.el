@@ -33,6 +33,8 @@
     markdown-mode
     slime
     ac-slime
+    magit
+    git-gutter
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
