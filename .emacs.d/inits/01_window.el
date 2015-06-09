@@ -58,6 +58,7 @@
 (global-set-key (kbd "C-c C-j") 'direx:jump-to-directory-other-window)
 
 
+;; mode-line
 ;; powerline
 (require 'powerline)
 (powerline-center-theme)
@@ -76,3 +77,38 @@
 ;;                     :foreground "#000"
 ;;                     :background "#00ffff"
 ;;                     :inherit 'mode-line)
+
+
+(defvar mode-line-cleaner-alist
+  '(;; major mode
+    (lisp-interaction-mode . "Li")
+    (python-mode . "Py")
+    (ruby-mode   . "Rb")
+    (emacs-lisp-mode . "El")
+    (scala-mode . "Sc")
+    (markdown-mode . "Md")
+    (fundamental-mode . "Fu")
+    ;;minor mode
+    (auto-complete-mode . "")
+    (yas-minor-mode . "")
+    (abbrev-mode . "")
+    (helm-mode . "")
+    (flymake-mode . " Fm")
+    (git-gutter-mode . "")
+    (magit-auto-revert-mode . "")
+    (ruby-block-mode . "")
+    (hs-minor-mode . "")
+    ))
+
+(defun clean-mode-line ()
+  (interactive)
+  (loop for (mode . mode-str) in mode-line-cleaner-alist
+        do
+        (let ((old-mode-str (cdr (assq mode minor-mode-alist))))
+          (when old-mode-str
+            (setcar old-mode-str mode-str))
+          ;; major mode
+          (when (eq mode major-mode)
+            (setq mode-name mode-str)))))
+
+(add-hook 'after-change-major-mode-hook 'clean-mode-line)
