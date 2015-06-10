@@ -91,6 +91,7 @@
     ;;minor mode
     (auto-complete-mode . "")
     (yas-minor-mode . "")
+    (company-mode . "")
     (abbrev-mode . "")
     (helm-mode . "")
     (flymake-mode . " Fm")
