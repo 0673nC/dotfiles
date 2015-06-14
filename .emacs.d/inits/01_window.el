@@ -88,6 +88,9 @@
     (scala-mode . "Sc")
     (markdown-mode . "Md")
     (fundamental-mode . "Fu")
+    (js2-mode . "Js")
+    (coffee-mode . "Co")
+    (java-mode . "Ja")
     ;;minor mode
     (auto-complete-mode . "")
     (yas-minor-mode . "")
