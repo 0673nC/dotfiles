@@ -53,6 +53,7 @@
 (define-key global-map (kbd "C-x b") 'helm-ls-git-ls)
 (define-key global-map (kbd "C-x g") 'helm-git-grep)
 (define-key global-map (kbd "C-c g") 'helm-do-grep)
+(define-key global-map (kbd "C-c o") 'helm-occur)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "M-x") 'helm-M-x)
