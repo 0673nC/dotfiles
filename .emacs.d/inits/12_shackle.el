@@ -4,7 +4,7 @@
 
 (require 'shackle)
 (setq shackle-rules
-      '(;; helmコマンドは下部に7割の大きさで表示
+      '(;; helmコマンドは下部に5割の大きさで表示
         ("\*helm" :regexp t :align below :ratio 0.5)
         ))
 (shackle-mode 1)
