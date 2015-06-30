@@ -35,6 +35,7 @@
     ac-slime
     magit
     git-gutter
+    shackle
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
