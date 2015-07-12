@@ -2,7 +2,6 @@
 ;;; php-mode
 ;;================================================
 
-;(load-library "php-mode-1.5.0")
 (require 'php-mode)
 (setq php-mode-force-pear t)
 
@@ -16,6 +15,11 @@
              ;; open - close function
              (hs-minor-mode 1)
              (define-key php-mode-map "\C-c\C-f" 'hs-toggle-hiding)
+             ;; key-combo
+             (require 'key-combo)
+             (key-combo-mode 1)
+             (key-combo-define-local (kbd "S") '("S" "$" "SS"))
+             (key-combo-define-local (kbd "F") '("F" "->" "FF"))
              ;; php-completion
              (require 'php-completion)
              (php-completion-mode t)

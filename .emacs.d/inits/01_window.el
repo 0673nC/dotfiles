@@ -91,6 +91,7 @@
     (js2-mode . "Js")
     (coffee-mode . "Co")
     (java-mode . "Ja")
+    (php-mode . "PHP")
     ;;minor mode
     (auto-complete-mode . "")
     (yas-minor-mode . "")
@@ -102,6 +103,7 @@
     (magit-auto-revert-mode . "")
     (ruby-block-mode . "")
     (hs-minor-mode . "")
+    (php-completion-mode . "")
     ))
 
 (defun clean-mode-line ()

@@ -36,6 +36,7 @@
     magit
     git-gutter
     shackle
+    key-combo
     ))
 (let ((not-installed 
        (loop for x in installing-package-list
