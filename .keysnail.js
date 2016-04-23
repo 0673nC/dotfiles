@@ -284,7 +284,7 @@ key.setEditKey('C-v', function (ev) {
   command.pageDown(ev);
 }, '一画面分下へ', false);
 
-key.setEditKey('M-v', function (ev) {
+key.setEditKey('M-u', function (ev) {
   command.pageUp(ev);
 }, '一画面分上へ', false);
 
