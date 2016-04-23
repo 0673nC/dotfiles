@@ -23,3 +23,6 @@
 (set-face-background 'magit-diff-file-header "Black")
 (set-face-background 'magit-diff-hunk-header "Black")
 (set-face-background 'magit-section-title "Black")
+
+;; 文字の折り返し無効
+(add-hook 'git-commit-mode-hook (setq auto-fill-mode nil))
