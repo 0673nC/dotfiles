@@ -5,7 +5,7 @@
 (setq initial-frame-alist
       (append
        '(;(top . 20)    ; frame Y position(pixel)
-         (left . 1000)    ; frame X position(pixel)
+         ;(left . 1000)    ; frame X position(pixel)
          (width . 80)    ; frame width(char)
          (height . 37)   ; frame height(char)
          (font . "fontset-16") ; font size
