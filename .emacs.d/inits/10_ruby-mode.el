@@ -11,7 +11,7 @@
 (add-to-list 'ac-modes 'ruby-mode)
 
 (add-hook 'ruby-mode-hook
-          '(lambda () 
+          '(lambda ()
              ;; open - close function
              (hs-minor-mode 1)
              ))
@@ -28,6 +28,7 @@
             (cons ruby-mode-hs-info hs-special-modes-alist))))
 
 (setq ruby-electric-expand-delimiters-list nil)
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;;; ruby-block.el --- highlight matching block
 (require 'ruby-block)
