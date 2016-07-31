@@ -1,0 +1,7 @@
+# Visualization
+set main-view = id date author commit-title:graph=yes,refs=yes
+set ignore-space = all
+set blame-options = -w
+
+# key bind
+bind status C !git commit -v
