@@ -26,7 +26,6 @@
     popwin
     shell-pop
     init-loader
-    tabbar
     powerline
     recentf-ext
     markdown-mode
