@@ -17,7 +17,7 @@
    ;'(helm-ls-git-show-abs-or-relative 'relative)
    ;; buffer内の文字をwindow端で折り返さない
    '(helm-truncate-lines t)
-   ;; helm-mini 
+   ;; helm-mini
    '(helm-mini-default-sources '(helm-source-buffers-list
                                  helm-source-files-in-current-dir
                                  helm-source-ls-git
@@ -27,7 +27,7 @@
 
 ;; Emulate `kill-line' in helm minibuffer
 (setq helm-delete-minibuffer-contents-from-point t)
-(defadvice helm-delete-minibuffer-contents 
+(defadvice helm-delete-minibuffer-contents
   (before helm-emulate-kill-line activate)
   "Emulate `kill-line' in helm minibuffer"
   (kill-new (buffer-substring (point) (field-end))))

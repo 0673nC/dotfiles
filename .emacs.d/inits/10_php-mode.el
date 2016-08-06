@@ -11,7 +11,7 @@
 (add-to-list 'ac-modes 'php-mode)
 
 (add-hook 'php-mode-hook
-          '(lambda () 
+          '(lambda ()
              ;; open - close function
              (hs-minor-mode 1)
              (define-key php-mode-map "\C-c\C-f" 'hs-toggle-hiding)

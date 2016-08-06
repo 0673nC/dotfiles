@@ -12,6 +12,6 @@
 (add-to-list 'ac-modes 'coffee-mode)
 
 (add-hook 'coffee-mode-hook
-  '(lambda() 
+  '(lambda()
      (coffee-custom)
      ))

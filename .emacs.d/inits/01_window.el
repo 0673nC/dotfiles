@@ -41,44 +41,7 @@
                (message "Quit")
                (throw 'end-flag t)))))))
 
-
-;; director tree
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-
-(require 'direx)
-
-(setq direx:leaf-icon "  "
-      ;;direx:open-icon "\&#9662; "
-      ;;direx:closed-icon "&#9654; ")
-      direx:open-icon "V "
-      direx:closed-icon "> ")
-(push '(direx:direx-mode :position left :width 30 :dedicated t)
-      popwin:special-display-config)
-(global-set-key (kbd "C-c C-j") 'direx:jump-to-directory-other-window)
-
-
 ;; mode-line
-;; powerline
-(require 'powerline)
-(powerline-center-theme)
-
-(set-face-attribute 'mode-line nil
-                    :foreground "#fff"
-                    :background "#00008b"
-                    :box nil)
-
-(set-face-attribute 'powerline-active1 nil
-                    :foreground "#fff"
-                    :background "#6495ed"
-                    :inherit 'mode-line)
-
-;; (set-face-attribute 'powerline-active2 nil
-;;                     :foreground "#000"
-;;                     :background "#00ffff"
-;;                     :inherit 'mode-line)
-
-
 (defvar mode-line-cleaner-alist
   '(;; major mode
     (lisp-interaction-mode . "Li")

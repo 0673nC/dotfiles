@@ -22,8 +22,7 @@
     ensime
     ruby-block
     php-mode
-    php-completion  
-    direx
+    php-completion
     popwin
     shell-pop
     init-loader
@@ -38,7 +37,7 @@
     shackle
     key-combo
     ))
-(let ((not-installed 
+(let ((not-installed
        (loop for x in installing-package-list
              when (not (package-installed-p x))
              collect x)))
@@ -46,4 +45,3 @@
     (package-refresh-contents)
     (dolist (pkg not-installed)
       (package-install pkg))))
-

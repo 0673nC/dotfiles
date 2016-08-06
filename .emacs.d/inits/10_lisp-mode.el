@@ -8,6 +8,9 @@
 (require 'slime)
 (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation))
 
+(require 'popwin)
+
+
 ;; SLIMEからの入力をUTF-8に設定
 (setq slime-net-coding-system 'utf-8-unix)
 
