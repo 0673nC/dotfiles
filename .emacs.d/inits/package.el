@@ -35,6 +35,8 @@
     git-gutter
     shackle
     key-combo
+    elscreen
+    elscreen-separate-buffer-list
     ))
 (let ((not-installed
        (loop for x in installing-package-list

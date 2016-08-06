@@ -40,9 +40,6 @@
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
 ;;(setq truncate-lines t)
 
-;;file name at title
-(setq frame-title-format (format "emacs@%s : %%f" (system-name)))
-
 ;;short question
 (fset 'yes-or-no-p 'y-or-n-p)
 
