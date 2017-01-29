@@ -37,12 +37,10 @@
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 
 ;; TABをActionから補完に
-(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 ;; helm-find-fileでC-wをActionに
-(define-key helm-c-read-file-map (kbd "C-w") 'helm-select-action)
 (define-key helm-find-files-map (kbd "C-w") 'helm-select-action)
 (define-key helm-read-file-map (kbd "C-w") 'helm-select-action)
 
