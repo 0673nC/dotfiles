@@ -3,26 +3,26 @@
 ;;==============================================
 
 (require 'magit)
-(setq magit-last-seen-setup-instructions "1.4.0")
-
 (defalias 'gs 'magit-status)
+
+(add-to-list 'with-editor-server-window-alist
+             (cons git-commit-filename-regexp 'switch-to-buffer))
+
+(package-initialize) ; otherwise Emacs doesn't know were to find it
+(setq package-initialize-at-startup nil) ; don't do it again
+(global-git-commit-mode)
 
 (global-git-gutter-mode t)
 
-;; 文字色変更
-(set-face-foreground 'magit-diff-add "#00FF00")
-(set-face-foreground 'magit-diff-del "#FF0000")
-(set-face-foreground 'magit-diff-file-header "#00FFFF")
-(set-face-foreground 'magit-diff-hunk-header "#00AADD")
-(set-face-foreground 'magit-section-title "#FF00FF")
-
-;; 背景色変更
-(set-face-background 'magit-item-highlight "Black")
-(set-face-background 'magit-diff-add "Black")
-(set-face-background 'magit-diff-del "Black")
-(set-face-background 'magit-diff-file-header "Black")
-(set-face-background 'magit-diff-hunk-header "Black")
-(set-face-background 'magit-section-title "Black")
+(set-face-foreground 'magit-diff-added "#00FF00")
+(set-face-background 'magit-diff-added "Black")
+(set-face-foreground 'magit-diff-added-highlight "#00FF00")
+(set-face-background 'magit-diff-added-highlight "Black")
+(set-face-foreground 'magit-diff-removed "#FF0000")
+(set-face-background 'magit-diff-removed "Black")
+(set-face-foreground 'magit-diff-removed-highlight "#FF0000")
+(set-face-background 'magit-diff-removed-highlight "Black")
+(set-face-background 'magit-diff-lines-boundary "blue")
 
 ;; 文字の折り返し無効
 (add-hook 'git-commit-mode-hook (setq auto-fill-mode nil))
