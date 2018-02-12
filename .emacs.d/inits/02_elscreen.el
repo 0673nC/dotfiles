@@ -7,7 +7,4 @@
 (elscreen-separate-buffer-list-mode 1)
 
 ;; elscreen-server
-(require 'elscreen-server)
-
-
 (elscreen-start)
